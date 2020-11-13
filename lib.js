@@ -15,10 +15,21 @@ exports.initial = (arr, n) => {
   if (n === undefined) {
     n = 1;
   }
-
   if (n > arr.length) {
     n = arr.length;
   }
-  
   return arr.slice(0, arr.length - n);
 }
+
+exports.last = (arr, n) => {
+  if (n === undefined) {
+    return arr[arr.length - 1];
+  }
+  if (n > arr.length) {
+    n = arr.length;
+  }
+  if (n <= 0) {
+    return [];
+  }
+  return arr.slice(arr.length - n);
+};
