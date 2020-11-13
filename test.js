@@ -24,4 +24,13 @@ assert.deepStrictEqual(_.initial([5, 4, 3, 2, 1], 6), []);  // `n` is bigger tha
 assert.deepStrictEqual(_.initial([5, 4, 3, 2, 1], 0), [5,4,3,2,1]);  // `n` is 0
 assert.deepStrictEqual(_.initial([5, 4, 3, 2, 1], -1), [5, 4, 3, 2, 1]);  // `n` is negative
 
+// last
+assert.deepStrictEqual(_.last([5, 4, 3, 2, 1]), 1);
+assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], 1), [1]);
+assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], 2), [2, 1]);
+assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], 3), [3, 2, 1]);
+assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], 0), []);
+assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], -1), []);
+assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], 6), [5, 4, 3, 2, 1]);
+
 console.log("all passed");
