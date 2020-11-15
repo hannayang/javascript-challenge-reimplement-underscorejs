@@ -43,6 +43,9 @@ assert.deepStrictEqual(_.rest([5, 4, 3, 2, 1], 4), [1]);
 assert.deepStrictEqual(_.rest([5, 4, 3, 2, 1], 0), [5, 4, 3, 2, 1]);
 assert.deepStrictEqual(_.rest([5, 4, 3, 2, 1], -1), [1]);
 assert.deepStrictEqual(_.rest([5, 4, 3, 2, 1], -2), [2, 1]);
+assert.deepStrictEqual(_.rest([5, 4, 3, 2, 1], -5), [5, 4, 3, 2, 1]);
+assert.deepStrictEqual(_.rest([5, 4, 3, 2, 1], -6), [5, 4, 3, 2, 1]);
+assert.deepStrictEqual(_.rest([5, 4, 3, 2, 1], -7), [5, 4, 3, 2, 1]);
 assert.deepStrictEqual(_.rest([5, 4, 3, 2, 1], 6), []);
 
 console.log("all passed");
