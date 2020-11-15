@@ -33,3 +33,16 @@ exports.last = (arr, n) => {
   }
   return arr.slice(arr.length - n);
 };
+
+exports.rest = (arr, n) => {
+  if (n === undefined) {
+    n = 1;
+  }
+  if (n < 0 && n > (-arr.length)) {
+    n = n + arr.length;
+  }
+  if (n <= (-arr.length)) {
+    n = 0;
+  }
+  return arr.slice(n);
+};
