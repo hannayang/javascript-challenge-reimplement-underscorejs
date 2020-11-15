@@ -33,4 +33,8 @@ assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], 0), []);
 assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], -1), []);
 assert.deepStrictEqual(_.last([5, 4, 3, 2, 1], 6), [5, 4, 3, 2, 1]);
 
+// compact
+assert.deepStrictEqual(_.compact([0, 1, false, 2, '', 3]), [1, 2, 3]);
+assert.deepStrictEqual(_.compact([0, false, 2, null, NaN, 'a', undefined]), [2, 'a']);
+
 console.log("all passed");
