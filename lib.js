@@ -33,3 +33,7 @@ exports.last = (arr, n) => {
   }
   return arr.slice(arr.length - n);
 };
+
+exports.compact = (list) => {
+  return list.filter((item) => !!item);
+}
